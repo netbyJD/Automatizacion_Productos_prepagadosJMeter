@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "8e45ed3d-727b-4455-b9a9-a7fd28c7b0b0",
+		"name": "VENTA PRODUCTOS SIMA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47359101",
+		"_collection_link": "https://jonathandelgado1-6553993.postman.co/workspace/jonathandelgado1's-Workspace~032a5be0-1b78-452f-86aa-05d5f524bc3b/collection/47359101-8e45ed3d-727b-4455-b9a9-a7fd28c7b0b0?action=share&source=collection_link&creator=47359101"
+	},
+	"item": [
+		{
+			"name": "Mas Vida Segura Plus",
+			"item": [
+				{
+					"name": "1.Referir DB PREPAGADO_PRUEBA 1_MVSP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UsuarioAsesor\": \"jclement\",\r\n    \"TokenSistema\": {{TOKEN_SISTEM}},\r\n    \"TokenSponsor\": {{TOKEN_SPONSOR}},\r\n    \"Accion\": \"R\",\r\n    \"TipoIdentificacion\": \"0001\",\r\n    \"Identificacion\": \"\",\r\n    \"PrimerNombre\": \"MARCIA\",\r\n    \"SegundoNombre\": \"SOFIA\",\r\n    \"TercerNombre\": \"\",\r\n    \"PrimerApellido\": \"SHIGUANGO\", \r\n    \"SegundoApellido\": \"TAPUY\",\r\n    \"FechaNacimiento\": \"25/10/1983\",\r\n    \"Edad\": \"40\",\r\n    \"CodigoGenero\": \"1\",\r\n    \"CodigoEstadoCivil\": \"2\",\r\n    \"IngresosMensuales\": \"2080.00\",\r\n    \"Patrimonio\": \"80200.00\",\r\n    \"Canton\": \"0060\",\r\n    \"PaisOrigen\": \"EC\",\r\n    \"Nacionalidad\": \"EC\",\r\n    \"LugarNacimiento\": \"PICHINCHA-QUITO\",\r\n    \"EmailPersonal\": \"catalina.felix@logicstudioplus.net\",\r\n    \"TelefonoMovil\": \"0979122175\",\r\n    \"Ocupacion\": \"800011\",\r\n    \"CodigoPaisDomicilio\": \"ECUADOR\",\r\n    \"CodigoProvinciaDomicilio\": \"17\",\r\n    \"CodigoCiudadDomicilio\": \"0060\",\r\n    \"DireccionDomicilio\": \"De los Eucaliptos Oe4-306 y Diego de Vasquez\",\r\n    \"TelefonoDomicilio\": \"023166666\",\r\n    \"CodigoActividadEconomica\": \"16000\",\r\n    \"CodigoSubActividad\": \"16505\",\r\n    \"PersonaContacto\": \"Pedro Andrade \",\r\n    \"TelefonoContacto\": \"0979516482\",\r\n    \"ParentescoContacto\": \"Amigo\",\r\n    \"FechaReferimiento\": \"2025-02-18T12:55:00\",\r\n    \"IdReferimientoCanalVenta\": \"CF18012025_1402\",\r\n    \"Productos\": [\r\n        {\r\n            \"CodigoProducto\": \"96\",\r\n            \"CodigoProductoSIGS\": null,\r\n            \"CodigoCobertura\": \"11P\",\r\n            \"CodigoModalidad\": \"P\",\r\n            \"CodigoFrecuencia\": \"AP\",\r\n            \"ValorTotalConIva\": 29.99,\r\n            \"ValorTotalSinIva\": 28.84,\r\n            \"TipoCuentaTarjeta\": \"Q\",\r\n            \"DescripcionCuentaTarjeta\": null,\r\n            \"NoCuentaTarjeta\": \"2100208832\",\r\n            \"Enfermedad\": \"Gastritis\",\r\n            \"Validado\": false,\r\n            \"Mensaje\": null,\r\n            \"DireccionBienAsegurado\": \"\",\r\n            \"TelefonoBienAsegurado\": \"\",\r\n            \"CodigoPaisNegocio\": \"\",\r\n            \"CodigoCiudadNegocio\": \"\",\r\n            \"CodigoProvinciaNegocio\": \"\",\r\n            \"DireccionNegocio\": \"\",\r\n            \"Beneficiarios\": [\r\n                {\r\n                    \"Identificacion\": \"174534231\",\r\n                    \"PrimerNombre\": \"ANDRES\",\r\n                    \"SegundoNombre\": \"ANIBAL\",\r\n                    \"TercerNombre\": \"\",\r\n                    \"PrimerApellido\": \"SOLIS\",\r\n                    \"SegundoApellido\": \"SOL\",\r\n                    \"FechaNacimiento\": \"2004-01-01\",\r\n                    \"Edad\": 0,\r\n                    \"CodigoGenero\": \"1\",\r\n                    \"Parentesco\": \"3\",\r\n                    \"Porcentaje\": 100,\r\n                    \"Telefono\": \"0999994565\",\r\n                    \"Mail\": \"emai@dominio.com\",\r\n                    \"Validado\": false,\r\n                    \"Mensaje\": null\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"RolAsesor\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP_GENERAL}}{{URL_REFERIDO}}",
+							"protocol": "http",
+							"host": [
+								"{{IP_GENERAL}}{{URL_REFERIDO}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Negocio Protegido SIMA Micro",
+			"item": [
+				{
+					"name": "Negocio Protegido SIMA Micro Recurrente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UsuarioAsesor\": \"jclement\",\r\n    \"TokenSistema\": {{TOKEN_SISTEM}},\r\n    \"TokenSponsor\": {{TOKEN_SPONSOR}},\r\n    \"Accion\": \"R\",\r\n    \"TipoIdentificacion\": \"0001\",\r\n    \"Identificacion\": \"1711400422\",\r\n    \"PrimerNombre\": \"PABLO\",\r\n    \"SegundoNombre\": \"C\",\r\n    \"TercerNombre\": \"\",\r\n    \"PrimerApellido\": \"ANDRADE\",\r\n    \"SegundoApellido\": \"VELASCO\",\r\n    \"FechaNacimiento\": \"2002-03-09\",\r\n    \"Edad\": \"23\",\r\n    \"CodigoGenero\": \"0\",\r\n    \"CodigoEstadoCivil\": \"5\",\r\n    \"IngresosMensuales\": \"1269.80\",\r\n    \"Patrimonio\": \"20000.02\",\r\n    \"Canton\": \"0410\",\r\n    \"PaisOrigen\": \"EC\",\r\n    \"Nacionalidad\": \"EC\",\r\n    \"LugarNacimiento\": \"SANTA ELENA-SANTA ELENA\",\r\n    \"EmailPersonal\": \"jackeline.palacios@logicstudioplus.net\",\r\n    \"TelefonoMovil\": \"0991550842\",\r\n    \"Ocupacion\": \"100016\",\r\n    \"CodigoPaisDomicilio\": \"ECUADOR\",\r\n    \"CodigoProvinciaDomicilio\": \"24\",\r\n    \"CodigoCiudadDomicilio\": \"0410\",\r\n    \"DireccionDomicilio\": \"Santa elena CALLE CH AURELIO LAINEZ BARRIO ENTRE RIOS\",\r\n    \"TelefonoDomicilio\": \"022222222\",\r\n    \"CodigoActividadEconomica\": \"17000\",\r\n    \"CodigoSubActividad\": \"17652\",\r\n    \"PersonaContacto\": \"Gilda tubay reyes\",\r\n    \"TelefonoContacto\": \"0987931110\",\r\n    \"ParentescoContacto\": \"Hermana\",\r\n    \"FechaReferimiento\": \"2024-02-14T16:22:00\",\r\n    \"IdReferimientoCanalVenta\": \"cda_20250620_1\",\r\n    \"Productos\": [\r\n        {\r\n            \"CodigoProducto\": \"246\",\r\n            \"CodigoProductoSIGS\": null,\r\n            \"CodigoCobertura\": \"1P\",\r\n            \"CodigoModalidad\": \"R\",\r\n            \"CodigoFrecuencia\": \"AP\",\r\n            \"ValorTotalConIva\": 16.58,\r\n            \"ValorTotalSinIva\": 13.48,\r\n            \"TipoCuentaTarjeta\": \"S\",\r\n            \"DescripcionCuentaTarjeta\": null,\r\n            \"NoCuentaTarjeta\": \"2204461620\",\r\n            \"Enfermedad\": \"\",\r\n            \"Validado\": false,\r\n            \"Mensaje\": null,\r\n            \"DireccionBienAsegurado\": \"\",\r\n            \"TelefonoBienAsegurado\": \"\",\r\n            \"CodigoPaisNegocio\": \"EC\",\r\n            \"CodigoCiudadNegocio\": \"0410\",\r\n            \"CodigoProvinciaNegocio\": \"24\",\r\n            \"DireccionNegocio\": \"CALLE PRENSA A\",\r\n            \"Beneficiarios\": []\r\n        }\r\n    ],\r\n    \"RolAsesor\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP_GENERAL}}{{URL_REFERIDO}}",
+							"protocol": "http",
+							"host": [
+								"{{IP_GENERAL}}{{URL_REFERIDO}}"
+							]
+						},
+						"description": "Generated from cURL: curl --location 'http://10.202.30.12:8098/api/ventas/movilidad/referir' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n    \"UsuarioAsesor\": \"jclement\",\r\n    \"TokenSistema\": \"CE461A2A-DF80-436C-B27B-4726BAB2ED85\",\r\n    \"TokenSponsor\": \"4D7BB88E-6CAD-426E-B4AF-67888E0A60BB\",\r\n    \"Accion\": \"R\",\r\n    \"TipoIdentificacion\": \"0001\",\r\n    \"Identificacion\": \"1725843039\",\r\n    \"PrimerNombre\": \"PABLO\",\r\n    \"SegundoNombre\": \"C\",\r\n    \"TercerNombre\": \"\",\r\n    \"PrimerApellido\": \"ANDRADE\",\r\n    \"SegundoApellido\": \"VELASCO\",\r\n    \"FechaNacimiento\": \"2002-03-09\",\r\n    \"Edad\": \"23\",\r\n    \"CodigoGenero\": \"0\",\r\n    \"CodigoEstadoCivil\": \"5\",\r\n    \"IngresosMensuales\": \"1269.80\",\r\n    \"Patrimonio\": \"20000.02\",\r\n    \"Canton\": \"0410\",\r\n    \"PaisOrigen\": \"EC\",\r\n    \"Nacionalidad\": \"EC\",\r\n    \"LugarNacimiento\": \"SANTA ELENA-SANTA ELENA\",\r\n    \"EmailPersonal\": \"cindy.dealmada@logicstudioplus.net\",\r\n    \"TelefonoMovil\": \"0958896652\",\r\n    \"Ocupacion\": \"100016\",\r\n    \"CodigoPaisDomicilio\": \"ECUADOR\",\r\n    \"CodigoProvinciaDomicilio\": \"24\",\r\n    \"CodigoCiudadDomicilio\": \"0410\",\r\n    \"DireccionDomicilio\": \"Santa elena CALLE CH AURELIO LAINEZ BARRIO ENTRE RIOS\",\r\n    \"TelefonoDomicilio\": \"022222222\",\r\n    \"CodigoActividadEconomica\": \"17000\",\r\n    \"CodigoSubActividad\": \"17652\",\r\n    \"PersonaContacto\": \"Gilda tubay reyes\",\r\n    \"TelefonoContacto\": \"0987931110\",\r\n    \"ParentescoContacto\": \"Hermana\",\r\n    \"FechaReferimiento\": \"2024-02-14T16:22:00\",\r\n    \"IdReferimientoCanalVenta\": \"cda_20250620_1\",\r\n    \"Productos\": [\r\n        {\r\n            \"CodigoProducto\": \"246\",\r\n            \"CodigoProductoSIGS\": null,\r\n            \"CodigoCobertura\": \"1P\",\r\n            \"CodigoModalidad\": \"R\",\r\n            \"CodigoFrecuencia\": \"AP\",\r\n            \"ValorTotalConIva\": 16.58,\r\n            \"ValorTotalSinIva\": 13.48,\r\n            \"TipoCuentaTarjeta\": \"S\",\r\n            \"DescripcionCuentaTarjeta\": null,\r\n            \"NoCuentaTarjeta\": \"2204461620\",\r\n            \"Enfermedad\": \"\",\r\n            \"Validado\": false,\r\n            \"Mensaje\": null,\r\n            \"DireccionBienAsegurado\": \"\",\r\n            \"TelefonoBienAsegurado\": \"\",\r\n            \"CodigoPaisNegocio\": \"EC\",\r\n            \"CodigoCiudadNegocio\": \"0410\",\r\n            \"CodigoProvinciaNegocio\": \"24\",\r\n            \"DireccionNegocio\": \"CALLE PRENSA A\",\r\n            \"Beneficiarios\": []\r\n        }\r\n    ],\r\n    \"RolAsesor\": null\r\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Negocio Protegido SIMA Micro Prepagado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UsuarioAsesor\": \"jclement\",\r\n    \"TokenSistema\": {{TOKEN_SISTEM}},\r\n    \"TokenSponsor\": {{TOKEN_SPONSOR}},\r\n    \"Accion\": \"R\",\r\n    \"TipoIdentificacion\": \"0001\",\r\n    \"Identificacion\": \"1500960313\",\r\n    \"PrimerNombre\": \"EMILY\",\r\n    \"SegundoNombre\": \"NICOLE\",\r\n    \"TercerNombre\": \"\",\r\n    \"PrimerApellido\": \"GARCIA\",\r\n    \"SegundoApellido\": \"CAMACHO\",\r\n    \"FechaNacimiento\": \"1976-01-02\",\r\n    \"Edad\": \"49\",\r\n    \"CodigoGenero\": \"0\",\r\n    \"CodigoEstadoCivil\": \"5\",\r\n    \"IngresosMensuales\": \"1269.80\",\r\n    \"Patrimonio\": \"20000.02\",\r\n    \"Canton\": \"0410\",\r\n    \"PaisOrigen\": \"EC\",\r\n    \"Nacionalidad\": \"EC\",\r\n    \"LugarNacimiento\": \"SANTA ELENA-SANTA ELENA\",\r\n    \"EmailPersonal\": \"jackeline.palacios@logicstudioplus.net\",\r\n    \"TelefonoMovil\": \"0991550842\",\r\n    \"Ocupacion\": \"100016\",\r\n    \"CodigoPaisDomicilio\": \"ECUADOR\",\r\n    \"CodigoProvinciaDomicilio\": \"24\",\r\n    \"CodigoCiudadDomicilio\": \"0410\",\r\n    \"DireccionDomicilio\": \"Santa elena CALLE CH AURELIO LAINEZ BARRIO ENTRE RIOS\",\r\n    \"TelefonoDomicilio\": \"022222222\",\r\n    \"CodigoActividadEconomica\": \"17000\",\r\n    \"CodigoSubActividad\": \"17652\",\r\n    \"PersonaContacto\": \"Gilda tubay reyes\",\r\n    \"TelefonoContacto\": \"0987931110\",\r\n    \"ParentescoContacto\": \"Hermana\",\r\n    \"FechaReferimiento\": \"2024-02-14T16:22:00\",\r\n    \"IdReferimientoCanalVenta\": \"cda_20250623_2\",\r\n    \"Productos\": [\r\n        {\r\n            \"CodigoProducto\": \"246\",\r\n            \"CodigoProductoSIGS\": null,\r\n            \"CodigoCobertura\": \"1\",\r\n            \"CodigoModalidad\": \"P\",\r\n            \"CodigoFrecuencia\": \"BP\",\r\n            \"ValorTotalConIva\": 32.69,\r\n            \"ValorTotalSinIva\": 29.96,\r\n            \"TipoCuentaTarjeta\": \"S\",\r\n            \"DescripcionCuentaTarjeta\": null,\r\n            \"NoCuentaTarjeta\": \"2204461620\",\r\n            \"Enfermedad\": \"\",\r\n            \"Validado\": false,\r\n            \"Mensaje\": null,\r\n            \"DireccionBienAsegurado\": \"\",\r\n            \"TelefonoBienAsegurado\": \"\",\r\n            \"CodigoPaisNegocio\": \"EC\",\r\n            \"CodigoCiudadNegocio\": \"0410\",\r\n            \"CodigoProvinciaNegocio\": \"24\",\r\n            \"DireccionNegocio\": \"CALLE PRENSA\",\r\n            \"Beneficiarios\": []\r\n        }\r\n    ],\r\n    \"RolAsesor\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP_GENERAL}}{{URL_REFERIDO}}",
+							"protocol": "http",
+							"host": [
+								"{{IP_GENERAL}}{{URL_REFERIDO}}"
+							]
+						},
+						"description": "Generated from cURL: curl --location 'http://10.202.30.12:8098/api/ventas/movilidad/referir' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n    \"UsuarioAsesor\": \"jclement\",\r\n    \"TokenSistema\": \"CE461A2A-DF80-436C-B27B-4726BAB2ED85\",\r\n    \"TokenSponsor\": \"4D7BB88E-6CAD-426E-B4AF-67888E0A60BB\",\r\n    \"Accion\": \"R\",\r\n    \"TipoIdentificacion\": \"0001\",\r\n    \"Identificacion\": \"2300773443\",\r\n    \"PrimerNombre\": \"EMILY\",\r\n    \"SegundoNombre\": \"NICOLE\",\r\n    \"TercerNombre\": \"\",\r\n    \"PrimerApellido\": \"GARCIA\",\r\n    \"SegundoApellido\": \"CAMACHO\",\r\n    \"FechaNacimiento\": \"1976-01-02\",\r\n    \"Edad\": \"49\",\r\n    \"CodigoGenero\": \"0\",\r\n    \"CodigoEstadoCivil\": \"5\",\r\n    \"IngresosMensuales\": \"1269.80\",\r\n    \"Patrimonio\": \"20000.02\",\r\n    \"Canton\": \"0410\",\r\n    \"PaisOrigen\": \"EC\",\r\n    \"Nacionalidad\": \"EC\",\r\n    \"LugarNacimiento\": \"SANTA ELENA-SANTA ELENA\",\r\n    \"EmailPersonal\": \"cindy.almada@logicstudioplus.net\",\r\n    \"TelefonoMovil\": \"0958896652\",\r\n    \"Ocupacion\": \"100016\",\r\n    \"CodigoPaisDomicilio\": \"ECUADOR\",\r\n    \"CodigoProvinciaDomicilio\": \"24\",\r\n    \"CodigoCiudadDomicilio\": \"0410\",\r\n    \"DireccionDomicilio\": \"Santa elena CALLE CH AURELIO LAINEZ BARRIO ENTRE RIOS\",\r\n    \"TelefonoDomicilio\": \"022222222\",\r\n    \"CodigoActividadEconomica\": \"17000\",\r\n    \"CodigoSubActividad\": \"17652\",\r\n    \"PersonaContacto\": \"Gilda tubay reyes\",\r\n    \"TelefonoContacto\": \"0987931110\",\r\n    \"ParentescoContacto\": \"Hermana\",\r\n    \"FechaReferimiento\": \"2024-02-14T16:22:00\",\r\n    \"IdReferimientoCanalVenta\": \"cda_20250623_2\",\r\n    \"Productos\": [\r\n        {\r\n            \"CodigoProducto\": \"246\",\r\n            \"CodigoProductoSIGS\": null,\r\n            \"CodigoCobertura\": \"1\",\r\n            \"CodigoModalidad\": \"P\",\r\n            \"CodigoFrecuencia\": \"BP\",\r\n            \"ValorTotalConIva\": 32.69,\r\n            \"ValorTotalSinIva\": 29.96,\r\n            \"TipoCuentaTarjeta\": \"S\",\r\n            \"DescripcionCuentaTarjeta\": null,\r\n            \"NoCuentaTarjeta\": \"2204461620\",\r\n            \"Enfermedad\": \"\",\r\n            \"Validado\": false,\r\n            \"Mensaje\": null,\r\n            \"DireccionBienAsegurado\": \"\",\r\n            \"TelefonoBienAsegurado\": \"\",\r\n            \"CodigoPaisNegocio\": \"EC\",\r\n            \"CodigoCiudadNegocio\": \"0410\",\r\n            \"CodigoProvinciaNegocio\": \"24\",\r\n            \"DireccionNegocio\": \"CALLE PRENSA\",\r\n            \"Beneficiarios\": []\r\n        }\r\n    ],\r\n    \"RolAsesor\": null\r\n}'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medife Plus",
+			"item": [
+				{
+					"name": "Medife Plus Prepagado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UsuarioAsesor\": \"jclement\",\r\n    \"TokenSistema\": {{TOKEN_SISTEM}},\r\n    \"TokenSponsor\": {{TOKEN_SPONSOR}},\r\n    \"Accion\": \"R\",\r\n    \"TipoIdentificacion\": \"0001\",\r\n    \"Identificacion\": \"2300283583\",\r\n    \"PrimerNombre\": \"JACKELINE\",\r\n    \"SegundoNombre\": \"MARISOL\",\r\n    \"TercerNombre\": \"\",\r\n    \"PrimerApellido\": \"PALACIOS\",\r\n    \"SegundoApellido\": \"ALULIMA\",\r\n    \"FechaNacimiento\": \"11/08/1973\",\r\n    \"Edad\": \"47\",\r\n    \"CodigoGenero\": \"0\",\r\n    \"CodigoEstadoCivil\": \"2\",\r\n    \"IngresosMensuales\": \"6780.00\",\r\n    \"Patrimonio\": \"97400.00\",\r\n    \"Canton\": \"0060\",\r\n    \"PaisOrigen\": \"EC\",\r\n    \"Nacionalidad\": \"EC\",\r\n    \"LugarNacimiento\": \"PICHINCHA-QUITO\",\r\n    \"EmailPersonal\": \"jackeline.palacios@logicstudioplus.net\",\r\n    \"TelefonoMovil\": \"0991550842\",\r\n    \"Ocupacion\": \"800011\",\r\n    \"CodigoPaisDomicilio\": \"ECUADOR\",\r\n    \"CodigoProvinciaDomicilio\": \"17\",\r\n    \"CodigoCiudadDomicilio\": \"0060\",\r\n    \"DireccionDomicilio\": \"WHYMPER 689 6 DE DICIEMBRE\",\r\n    \"TelefonoDomicilio\": \"023166666\",\r\n    \"CodigoActividadEconomica\": \"16000\",\r\n    \"CodigoSubActividad\": \"16505\",\r\n    \"PersonaContacto\": \"Pedro Torres \",\r\n    \"TelefonoContacto\": \"0979516403\",\r\n    \"ParentescoContacto\": \"Vecino\",\r\n    \"FechaReferimiento\": \"2024-01-14T15:08:00\",\r\n    \"IdReferimientoCanalVenta\": \"pru2\",\r\n    \"Productos\": [\r\n        {\r\n            \"CodigoProducto\": \"191\",\r\n            \"CodigoProductoSIGS\": null,\r\n            \"CodigoCobertura\": \"2P\",\r\n            \"CodigoModalidad\": \"P\",\r\n            \"CodigoFrecuencia\": \"AP\",\r\n            \"ValorTotalConIva\": 142.99,\r\n            \"ValorTotalSinIva\": 142.28,\r\n            \"TipoCuentaTarjeta\": \"Q\",\r\n            \"DescripcionCuentaTarjeta\": null,\r\n            \"NoCuentaTarjeta\": \"2204042477\",\r\n            \"Enfermedad\": \"NO\",\r\n            \"Validado\": false,\r\n            \"Mensaje\": null,\r\n            \"DireccionBienAsegurado\": \"\",\r\n            \"TelefonoBienAsegurado\": \"\",\r\n            \"CodigoPaisNegocio\": \"\",\r\n            \"CodigoCiudadNegocio\": \"\",\r\n            \"CodigoProvinciaNegocio\": \"\",\r\n            \"DireccionNegocio\": \"\",\r\n            \"Beneficiarios\": [\r\n                {\r\n                    \"Identificacion\": \"174534231\",\r\n                    \"PrimerNombre\": \"ANDRES\",\r\n                    \"SegundoNombre\": \"ANIBAL\",\r\n                    \"TercerNombre\": \"\",\r\n                    \"PrimerApellido\": \"SOLIS\",\r\n                    \"SegundoApellido\": \"SOLIS\",\r\n                    \"FechaNacimiento\": \"2004-01-01\",\r\n                    \"Edad\": 0,\r\n                    \"CodigoGenero\": \"1\",\r\n                    \"Parentesco\": \"3\",\r\n                    \"Porcentaje\": 100,\r\n                    \"Telefono\": \"0999994565\",\r\n                    \"Mail\": \"emai@dominio.com\",\r\n                    \"Validado\": false,\r\n                    \"Mensaje\": null\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"RolAsesor\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP_GENERAL}}{{URL_REFERIDO}}",
+							"protocol": "http",
+							"host": [
+								"{{IP_GENERAL}}{{URL_REFERIDO}}"
+							]
+						},
+						"description": "Generated from cURL: curl --location 'http://10.202.30.12:8098/api/ventas/movilidad/referir' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n    \"UsuarioAsesor\": \"jclement\",\r\n    \"TokenSistema\": \"CE461A2A-DF80-436C-B27B-4726BAB2ED85\",\r\n    \"TokenSponsor\": \"4D7BB88E-6CAD-426E-B4AF-67888E0A60BB\",\r\n    \"Accion\": \"V\",\r\n    \"TipoIdentificacion\": \"0001\",\r\n    \"Identificacion\": \"1105037772\",\r\n    \"PrimerNombre\": \"JUAN\",\r\n    \"SegundoNombre\": \"LUIS\",\r\n    \"TercerNombre\": \"\",\r\n    \"PrimerApellido\": \"SOLIS\",\r\n    \"SegundoApellido\": \"VERA \",\r\n    \"FechaNacimiento\": \"11/08/1973\",\r\n    \"Edad\": \"47\",\r\n    \"CodigoGenero\": \"0\",\r\n    \"CodigoEstadoCivil\": \"2\",\r\n    \"IngresosMensuales\": \"6780.00\",\r\n    \"Patrimonio\": \"97400.00\",\r\n    \"Canton\": \"0060\",\r\n    \"PaisOrigen\": \"EC\",\r\n    \"Nacionalidad\": \"EC\",\r\n    \"LugarNacimiento\": \"PICHINCHA-QUITO\",\r\n    \"EmailPersonal\": \"jackeline.palacios@logicstudioplus.net\",\r\n    \"TelefonoMovil\": \"0991550842\",\r\n    \"Ocupacion\": \"800011\",\r\n    \"CodigoPaisDomicilio\": \"ECUADOR\",\r\n    \"CodigoProvinciaDomicilio\": \"17\",\r\n    \"CodigoCiudadDomicilio\": \"0060\",\r\n    \"DireccionDomicilio\": \"WHYMPER 689 6 DE DICIEMBRE\",\r\n    \"TelefonoDomicilio\": \"023166666\",\r\n    \"CodigoActividadEconomica\": \"16000\",\r\n    \"CodigoSubActividad\": \"16505\",\r\n    \"PersonaContacto\": \"Pedro Torres \",\r\n    \"TelefonoContacto\": \"0979516403\",\r\n    \"ParentescoContacto\": \"Vecino\",\r\n    \"FechaReferimiento\": \"2024-01-14T15:08:00\",\r\n    \"IdReferimientoCanalVenta\": \"jp01\",\r\n    \"Productos\": [\r\n        {\r\n            \"CodigoProducto\": \"357\",\r\n            \"CodigoProductoSIGS\": null,\r\n            \"CodigoCobertura\": \"2P\",\r\n            \"CodigoModalidad\": \"P\",\r\n            \"CodigoFrecuencia\": \"AP\",\r\n            \"ValorTotalConIva\": 142.99,\r\n            \"ValorTotalSinIva\": 142.28,\r\n            \"TipoCuentaTarjeta\": \"Q\",\r\n            \"DescripcionCuentaTarjeta\": null,\r\n            \"NoCuentaTarjeta\": \"2204042477\",\r\n            \"Enfermedad\": \"NO\",\r\n            \"Validado\": false,\r\n            \"Mensaje\": null,\r\n            \"DireccionBienAsegurado\": \"\",\r\n            \"TelefonoBienAsegurado\": \"\",\r\n            \"CodigoPaisNegocio\": \"\",\r\n            \"CodigoCiudadNegocio\": \"\",\r\n            \"CodigoProvinciaNegocio\": \"\",\r\n            \"DireccionNegocio\": \"\",\r\n            \"Beneficiarios\": [\r\n                {\r\n                    \"Identificacion\": \"174534231\",\r\n                    \"PrimerNombre\": \"ANDRES\",\r\n                    \"SegundoNombre\": \"ANIBAL\",\r\n                    \"TercerNombre\": \"\",\r\n                    \"PrimerApellido\": \"SOLIS\",\r\n                    \"SegundoApellido\": \"SOLIS\",\r\n                    \"FechaNacimiento\": \"2006-04-25\",\r\n                    \"Edad\": 0,\r\n                    \"CodigoGenero\": \"1\",\r\n                    \"Parentesco\": \"3\",\r\n                    \"Porcentaje\": 100,\r\n                    \"Telefono\": \"0999994565\",\r\n                    \"Mail\": \"emai@dominio.com\",\r\n                    \"Validado\": false,\r\n                    \"Mensaje\": null\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"RolAsesor\": null\r\n}'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estudio Protegido",
+			"item": [
+				{
+					"name": "Estudio Protegido Prepagado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UsuarioAsesor\": \"SPONCE\",\r\n    \"TokenSistema\": {{TOKEN_SISTEM}},\r\n    \"TokenSponsor\": {{TOKEN_SPONSOR}},\r\n    \"Accion\": \"R\",\r\n    \"TipoIdentificacion\": \"0001\",\r\n    \"Identificacion\": \"1711400422\",\r\n    \"PrimerNombre\": \"JUAN\",\r\n    \"SegundoNombre\": \"LUIS\",\r\n    \"TercerNombre\": \"\",\r\n    \"PrimerApellido\": \"SOLIS\",\r\n    \"SegundoApellido\": \"VERA \",\r\n    \"FechaNacimiento\": \"11/08/1973\",\r\n    \"Edad\": \"47\",\r\n    \"CodigoGenero\": \"0\",\r\n    \"CodigoEstadoCivil\": \"2\",\r\n    \"IngresosMensuales\": \"6780.00\",\r\n    \"Patrimonio\": \"97400.00\",\r\n    \"Canton\": \"0060\",\r\n    \"PaisOrigen\": \"EC\",\r\n    \"Nacionalidad\": \"EC\",\r\n    \"LugarNacimiento\": \"PICHINCHA-QUITO\",\r\n    \"EmailPersonal\": \"jackeline.palacios@logicstudioplus.net\",\r\n    \"TelefonoMovil\": \"0991550842\",\r\n    \"Ocupacion\": \"800011\",\r\n    \"CodigoPaisDomicilio\": \"ECUADOR\",\r\n    \"CodigoProvinciaDomicilio\": \"17\",\r\n    \"CodigoCiudadDomicilio\": \"0060\",\r\n    \"DireccionDomicilio\": \"WHYMPER 689 6 DE DICIEMBRE\",\r\n    \"TelefonoDomicilio\": \"023166666\",\r\n    \"CodigoActividadEconomica\": \"16000\",\r\n    \"CodigoSubActividad\": \"16505\",\r\n    \"PersonaContacto\": \"Pedro Torres \",\r\n    \"TelefonoContacto\": \"0979516403\",\r\n    \"ParentescoContacto\": \"Vecino\",\r\n    \"FechaReferimiento\": \"2024-01-14T15:08:00\",\r\n    \"IdReferimientoCanalVenta\": \"jp02\",\r\n    \"Productos\": [\r\n        {\r\n            \"CodigoProducto\": \"194\",\r\n            \"CodigoProductoSIGS\": null,\r\n            \"CodigoCobertura\": \"1P\",\r\n            \"CodigoModalidad\": \"P\",\r\n            \"CodigoFrecuencia\": \"AP\",\r\n            \"ValorTotalConIva\": 62.34,\r\n            \"ValorTotalSinIva\": 59.51,\r\n            \"TipoCuentaTarjeta\": \"Q\",\r\n            \"DescripcionCuentaTarjeta\": null,\r\n            \"NoCuentaTarjeta\": \"2204042477\",\r\n            \"Enfermedad\": \"NO\",\r\n            \"Validado\": false,\r\n            \"Mensaje\": null,\r\n            \"DireccionBienAsegurado\": \"\",\r\n            \"TelefonoBienAsegurado\": \"\",\r\n            \"CodigoPaisNegocio\": \"\",\r\n            \"CodigoCiudadNegocio\": \"\",\r\n            \"CodigoProvinciaNegocio\": \"\",\r\n            \"DireccionNegocio\": \"\",\r\n            \"Beneficiarios\": [\r\n                {\r\n                    \"Identificacion\": \"174534231\",\r\n                    \"PrimerNombre\": \"ANDRES\",\r\n                    \"SegundoNombre\": \"ANIBAL\",\r\n                    \"TercerNombre\": \"\",\r\n                    \"PrimerApellido\": \"SOLIS\",\r\n                    \"SegundoApellido\": \"SOLIS\",\r\n                    \"FechaNacimiento\": \"2004-01-01\",\r\n                    \"Edad\": 0,\r\n                    \"CodigoGenero\": \"1\",\r\n                    \"Parentesco\": \"3\",\r\n                    \"Porcentaje\": 100,\r\n                    \"Telefono\": \"0999994565\",\r\n                    \"Mail\": \"emai@dominio.com\",\r\n                    \"Validado\": false,\r\n                    \"Mensaje\": null\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"RolAsesor\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{IP_GENERAL}}{{URL_REFERIDO}}",
+							"protocol": "http",
+							"host": [
+								"{{IP_GENERAL}}{{URL_REFERIDO}}"
+							]
+						},
+						"description": "Generated from cURL: curl --location 'http://10.202.30.12:8098/api/ventas/movilidad/referir' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n    \"UsuarioAsesor\": \"SPONCE\",\r\n    \"TokenSistema\": \"CE461A2A-DF80-436C-B27B-4726BAB2ED85\",\r\n    \"TokenSponsor\": \"4D7BB88E-6CAD-426E-B4AF-67888E0A60BB\",\r\n    \"Accion\": \"R\",\r\n    \"TipoIdentificacion\": \"0001\",\r\n    \"Identificacion\": \"1105037772\",\r\n    \"PrimerNombre\": \"JUAN\",\r\n    \"SegundoNombre\": \"LUIS\",\r\n    \"TercerNombre\": \"\",\r\n    \"PrimerApellido\": \"SOLIS\",\r\n    \"SegundoApellido\": \"VERA \",\r\n    \"FechaNacimiento\": \"11/08/1973\",\r\n    \"Edad\": \"47\",\r\n    \"CodigoGenero\": \"0\",\r\n    \"CodigoEstadoCivil\": \"2\",\r\n    \"IngresosMensuales\": \"6780.00\",\r\n    \"Patrimonio\": \"97400.00\",\r\n    \"Canton\": \"0060\",\r\n    \"PaisOrigen\": \"EC\",\r\n    \"Nacionalidad\": \"EC\",\r\n    \"LugarNacimiento\": \"PICHINCHA-QUITO\",\r\n    \"EmailPersonal\": \"jackeline.palacios@logicstudioplus.net\",\r\n    \"TelefonoMovil\": \"0991550842\",\r\n    \"Ocupacion\": \"800011\",\r\n    \"CodigoPaisDomicilio\": \"ECUADOR\",\r\n    \"CodigoProvinciaDomicilio\": \"17\",\r\n    \"CodigoCiudadDomicilio\": \"0060\",\r\n    \"DireccionDomicilio\": \"WHYMPER 689 6 DE DICIEMBRE\",\r\n    \"TelefonoDomicilio\": \"023166666\",\r\n    \"CodigoActividadEconomica\": \"16000\",\r\n    \"CodigoSubActividad\": \"16505\",\r\n    \"PersonaContacto\": \"Pedro Torres \",\r\n    \"TelefonoContacto\": \"0979516403\",\r\n    \"ParentescoContacto\": \"Vecino\",\r\n    \"FechaReferimiento\": \"2024-01-14T15:08:00\",\r\n    \"IdReferimientoCanalVenta\": \"jp02\",\r\n    \"Productos\": [\r\n        {\r\n            \"CodigoProducto\": \"194\",\r\n            \"CodigoProductoSIGS\": null,\r\n            \"CodigoCobertura\": \"1P\",\r\n            \"CodigoModalidad\": \"P\",\r\n            \"CodigoFrecuencia\": \"AP\",\r\n            \"ValorTotalConIva\": 62.34,\r\n            \"ValorTotalSinIva\": 59.51,\r\n            \"TipoCuentaTarjeta\": \"Q\",\r\n            \"DescripcionCuentaTarjeta\": null,\r\n            \"NoCuentaTarjeta\": \"2204042477\",\r\n            \"Enfermedad\": \"NO\",\r\n            \"Validado\": false,\r\n            \"Mensaje\": null,\r\n            \"DireccionBienAsegurado\": \"\",\r\n            \"TelefonoBienAsegurado\": \"\",\r\n            \"CodigoPaisNegocio\": \"\",\r\n            \"CodigoCiudadNegocio\": \"\",\r\n            \"CodigoProvinciaNegocio\": \"\",\r\n            \"DireccionNegocio\": \"\",\r\n            \"Beneficiarios\": [\r\n                {\r\n                    \"Identificacion\": \"174534231\",\r\n                    \"PrimerNombre\": \"ANDRES\",\r\n                    \"SegundoNombre\": \"ANIBAL\",\r\n                    \"TercerNombre\": \"\",\r\n                    \"PrimerApellido\": \"SOLIS\",\r\n                    \"SegundoApellido\": \"SOLIS\",\r\n                    \"FechaNacimiento\": \"2004-01-01\",\r\n                    \"Edad\": 0,\r\n                    \"CodigoGenero\": \"1\",\r\n                    \"Parentesco\": \"3\",\r\n                    \"Porcentaje\": 100,\r\n                    \"Telefono\": \"0999994565\",\r\n                    \"Mail\": \"emai@dominio.com\",\r\n                    \"Validado\": false,\r\n                    \"Mensaje\": null\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"RolAsesor\": null\r\n}'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "0-Consultar Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n       \"InPut\":\r\n     {\r\n        \"IdentificacionCliente\": \"1500960313\",\r\n        \"TipoIdentificacionCliente\": \"0001\",\r\n        \"UsuarioAsesor\": \"SPONCE\",\r\n        \"TokenSistema\": {{TOKEN_SISTEM}},\r\n        \"TokenSponsor\": {{TOKEN_SPONSOR}}\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{IP_GENERAL}}{{URL_PRODUCTOS}}",
+					"protocol": "http",
+					"host": [
+						"{{IP_GENERAL}}{{URL_PRODUCTOS}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

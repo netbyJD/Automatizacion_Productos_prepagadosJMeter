@@ -3,12 +3,12 @@ Este repositorio contiene las colecciones y entornos de Postman asi como tambié
 
 ## Postman
 
-### Importar la colección
+### ⬇️ Importar la colección
 1. Abrir Postman.
 2. Hacer clic en **Import**.
 3. Seleccionar `collections/VENTA PRODUCTOS SIMA.postman_collection.json`.
 
-### Importar el entorno
+### ⬇️ Importar el entorno
 1. Hacer clic en **Enviroments** -> **Import**.
 2. Seleccionar `enviroments/SERVICIOS.postman_environment.json`.
 
@@ -20,92 +20,50 @@ Este repositorio contiene las colecciones y entornos de Postman asi como tambié
 - Apache JMeter 5.5 o superior
 - Git
 
----
-
 ### 🚀 Instalación de Apache JMeter
 
 1. **Verifica que Java esté instalado:**
 
 ```bash
 java -version
-Descarga JMeter:
+```
 
-https://jmeter.apache.org/download_jmeter.cgi
+2. **Descarga JMeter:**
 
-Descomprime el archivo:
+- https://jmeter.apache.org/download_jmeter.cgi
 
-bash
-Copiar código
-tar -xvzf apache-jmeter-5.5.tgz
-Agrega JMeter al PATH (opcional):
+3. **Descomprime el archivo:**
 
-bash
-Copiar código
-export PATH=$PATH:/ruta/a/apache-jmeter-5.5/bin
-📥 Clonar el Repositorio
-bash
-Copiar código
-git clone https://github.com/tu-usuario/tu-repo-jmeter.git
+- Descomprimir el archivo apache-jmeter-5.5.zit o apache-jmeter-5.5.rar en la carpeta raiz de tu disco local C.
+
+### 📥 Clonar el Repositorio
+```bash
+git clone [https://github.com/tu-usuario/tu-repo-jmeter.git](https://github.com/jonathan-NB/Automatizacio_Productos_prepagadosJMeter.git)
 cd tu-repo-jmeter
-▶️ Ejecutar una Prueba
-Puedes ejecutar pruebas de JMeter desde la interfaz gráfica (GUI) o desde la línea de comandos (modo no-GUI).
+```
 
-Opción 1: Usar la Interfaz Gráfica
-bash
-Copiar código
+### ▶️ Ejecutar una Prueba
+Puedes ejecutar pruebas de JMeter desde la interfaz gráfica (GUI).
+
+**Usar la Interfaz Gráfica**
+```bash
 jmeter
-Luego, desde el menú:
+```
+- Luego, desde el menú:
 
-Archivo > Abrir y selecciona uno de los archivos .jmx en la carpeta pruebas/.
+`Archivo > Abrir` y selecciona uno de los archivos `.jmx` en la carpeta donde tienes guardados los archivos.
 
-Opción 2: Ejecutar en Modo No-GUI (recomendado para ejecución en CI/CD)
-bash
-Copiar código
-jmeter -n -t pruebas/login-test.jmx -l resultados/login-test.jtl -e -o resultados/reporte-login
-Parámetros:
+### 📦 Datos de Prueba
+Algunas pruebas usan archivos CSV. Asegúrate de que la ruta del archivo esté correctamente configurada en el elemento `CSV Data Set Config` de tu script `.jmx`.
 
--n: modo no-GUI
+### 🧪 Buenas Prácticas
+- Usa nombres descriptivos para los archivos `.jmx`.
 
--t: ruta al archivo .jmx
+- Guarda los resultados de pruebas en carpetas por fecha o tipo de prueba.
 
--l: archivo donde se guardarán los resultados (.jtl)
+- No incluyas datos sensibles en los archivos CSV o en el repositorio.
 
--e -o: genera un reporte HTML en la carpeta especificada
-
-📦 Datos de Prueba
-Algunas pruebas usan archivos CSV ubicados en la carpeta datos/. Asegúrate de que la ruta del archivo esté correctamente configurada en el elemento CSV Data Set Config de tu script .jmx.
-
-🧪 Buenas Prácticas
-Usa nombres descriptivos para los archivos .jmx.
-
-Guarda los resultados de pruebas en carpetas por fecha o tipo de prueba.
-
-No incluyas datos sensibles en los archivos CSV o en el repositorio.
-
-Versiona los archivos .jmx para mantener el control de cambios.
-
-🛠️ Contribuciones
-¿Quieres contribuir? Por favor, crea una rama o un pull request siguiendo la convención de nombres, por ejemplo:
-
-bash
-Copiar código
-git checkout -b feature/nueva-prueba-carga
-📄 Licencia
-MIT License
-
-📬 Contacto
-Si tienes dudas o sugerencias, contacta a:
-
-Nombre: [Tu Nombre]
-
-Email: [tu.email@ejemplo.com]
-
-GitHub: @tu-usuario
-
-yaml
-Copiar código
-
----
+- Versiona los archivos `.jmx` para mantener el control de cambios.
 
 ### Notas
 - Si el repositorio donde trabajas no es privado no subir los entornos reales con las credenciales, sino solamente subir una plantilla de ejemplo donde tendran que cambiar los valores figticios por los realies para su uso

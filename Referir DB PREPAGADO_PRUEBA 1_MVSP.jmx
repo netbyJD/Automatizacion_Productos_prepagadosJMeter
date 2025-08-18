@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan">
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables Globales">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="UsuarioAsesor" elementType="Argument">
+            <stringProp name="Argument.name">UsuarioAsesor</stringProp>
+            <stringProp name="Argument.value">jclement</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Server" elementType="Argument">
+            <stringProp name="Argument.name">Server</stringProp>
+            <stringProp name="Argument.value">10.202.30.12</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tokenSistema" elementType="Argument">
+            <stringProp name="Argument.name">tokenSistema</stringProp>
+            <stringProp name="Argument.value">CE461A2A-DF80-436C-B27B-4726BAB2ED85</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tokenSponsor" elementType="Argument">
+            <stringProp name="Argument.name">tokenSponsor</stringProp>
+            <stringProp name="Argument.value">4D7BB88E-6CAD-426E-B4AF-67888E0A60BB</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Referir DB PREPAGADO_PRUEBA 1_MVSP">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <longProp name="ThreadGroup.duration">120</longProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">3</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request PREPAGADO" enabled="true">
+          <stringProp name="HTTPSampler.domain">10.202.30.12</stringProp>
+          <stringProp name="HTTPSampler.port">8098</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">api/ventas/movilidad/referir</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;UsuarioAsesor&quot;: &quot;${UsuarioAsesor}&quot;,&#xd;
+    &quot;TokenSistema&quot;: &quot;${tokenSistema}&quot;,&#xd;
+    &quot;TokenSponsor&quot;: &quot;${tokenSponsor}&quot;,&#xd;
+    &quot;Accion&quot;: &quot;R&quot;,&#xd;
+    &quot;TipoIdentificacion&quot;: &quot;0001&quot;,&#xd;
+    &quot;Identificacion&quot;: &quot;${identificacion}&quot;,&#xd;
+    &quot;PrimerNombre&quot;: &quot;MARCIA&quot;,&#xd;
+    &quot;SegundoNombre&quot;: &quot;SOFIA&quot;,&#xd;
+    &quot;TercerNombre&quot;: &quot;&quot;,&#xd;
+    &quot;PrimerApellido&quot;: &quot;SHIGUANGO&quot;, &#xd;
+    &quot;SegundoApellido&quot;: &quot;TAPUY&quot;,&#xd;
+    &quot;FechaNacimiento&quot;: &quot;25/10/1983&quot;,&#xd;
+    &quot;Edad&quot;: &quot;40&quot;,&#xd;
+    &quot;CodigoGenero&quot;: &quot;1&quot;,&#xd;
+    &quot;CodigoEstadoCivil&quot;: &quot;2&quot;,&#xd;
+    &quot;IngresosMensuales&quot;: &quot;2080.00&quot;,&#xd;
+    &quot;Patrimonio&quot;: &quot;80200.00&quot;,&#xd;
+    &quot;Canton&quot;: &quot;0060&quot;,&#xd;
+    &quot;PaisOrigen&quot;: &quot;EC&quot;,&#xd;
+    &quot;Nacionalidad&quot;: &quot;EC&quot;,&#xd;
+    &quot;LugarNacimiento&quot;: &quot;PICHINCHA-QUITO&quot;,&#xd;
+    &quot;EmailPersonal&quot;: &quot;catalina.felix@logicstudioplus.net&quot;,&#xd;
+    &quot;TelefonoMovil&quot;: &quot;0979122175&quot;,&#xd;
+    &quot;Ocupacion&quot;: &quot;800011&quot;,&#xd;
+    &quot;CodigoPaisDomicilio&quot;: &quot;ECUADOR&quot;,&#xd;
+    &quot;CodigoProvinciaDomicilio&quot;: &quot;17&quot;,&#xd;
+    &quot;CodigoCiudadDomicilio&quot;: &quot;0060&quot;,&#xd;
+    &quot;DireccionDomicilio&quot;: &quot;De los Eucaliptos Oe4-306 y Diego de Vasquez&quot;,&#xd;
+    &quot;TelefonoDomicilio&quot;: &quot;023166666&quot;,&#xd;
+    &quot;CodigoActividadEconomica&quot;: &quot;16000&quot;,&#xd;
+    &quot;CodigoSubActividad&quot;: &quot;16505&quot;,&#xd;
+    &quot;PersonaContacto&quot;: &quot;Pedro Andrade &quot;,&#xd;
+    &quot;TelefonoContacto&quot;: &quot;0979516482&quot;,&#xd;
+    &quot;ParentescoContacto&quot;: &quot;Amigo&quot;,&#xd;
+    &quot;FechaReferimiento&quot;: &quot;2025-02-18T12:55:00&quot;,&#xd;
+    &quot;IdReferimientoCanalVenta&quot;: &quot;${idReferimientoCanalVenta}&quot;,&#xd;
+    &quot;Productos&quot;: [&#xd;
+        {&#xd;
+            &quot;CodigoProducto&quot;: &quot;96&quot;,&#xd;
+            &quot;CodigoProductoSIGS&quot;: null,&#xd;
+            &quot;CodigoCobertura&quot;: &quot;11P&quot;,&#xd;
+            &quot;CodigoModalidad&quot;: &quot;P&quot;,&#xd;
+            &quot;CodigoFrecuencia&quot;: &quot;AP&quot;,&#xd;
+            &quot;ValorTotalConIva&quot;: 29.99,&#xd;
+            &quot;ValorTotalSinIva&quot;: 28.84,&#xd;
+            &quot;TipoCuentaTarjeta&quot;: &quot;Q&quot;,&#xd;
+            &quot;DescripcionCuentaTarjeta&quot;: null,&#xd;
+            &quot;NoCuentaTarjeta&quot;: &quot;2100208832&quot;,&#xd;
+            &quot;Enfermedad&quot;: &quot;Gastritis&quot;,&#xd;
+            &quot;Validado&quot;: false,&#xd;
+            &quot;Mensaje&quot;: null,&#xd;
+            &quot;DireccionBienAsegurado&quot;: &quot;&quot;,&#xd;
+            &quot;TelefonoBienAsegurado&quot;: &quot;&quot;,&#xd;
+            &quot;CodigoPaisNegocio&quot;: &quot;&quot;,&#xd;
+            &quot;CodigoCiudadNegocio&quot;: &quot;&quot;,&#xd;
+            &quot;CodigoProvinciaNegocio&quot;: &quot;&quot;,&#xd;
+            &quot;DireccionNegocio&quot;: &quot;&quot;,&#xd;
+            &quot;Beneficiarios&quot;: [&#xd;
+                {&#xd;
+                    &quot;Identificacion&quot;: &quot;174534231&quot;,&#xd;
+                    &quot;PrimerNombre&quot;: &quot;ANDRES&quot;,&#xd;
+                    &quot;SegundoNombre&quot;: &quot;ANIBAL&quot;,&#xd;
+                    &quot;TercerNombre&quot;: &quot;&quot;,&#xd;
+                    &quot;PrimerApellido&quot;: &quot;SOLIS&quot;,&#xd;
+                    &quot;SegundoApellido&quot;: &quot;SOL&quot;,&#xd;
+                    &quot;FechaNacimiento&quot;: &quot;2004-01-01&quot;,&#xd;
+                    &quot;Edad&quot;: 0,&#xd;
+                    &quot;CodigoGenero&quot;: &quot;1&quot;,&#xd;
+                    &quot;Parentesco&quot;: &quot;3&quot;,&#xd;
+                    &quot;Porcentaje&quot;: 100,&#xd;
+                    &quot;Telefono&quot;: &quot;0999994565&quot;,&#xd;
+                    &quot;Mail&quot;: &quot;emai@dominio.com&quot;,&#xd;
+                    &quot;Validado&quot;: false,&#xd;
+                    &quot;Mensaje&quot;: null&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;RolAsesor&quot;: null&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename">D:/jonathanDelgado/automatizacion_con_JMETER/DatosSIMA-tk59888-p2.csv</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">identificacion,idReferimientoCanalVenta</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request PREPAGADO2" enabled="false">
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port">8098</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">api/ventas/movilidad/referir</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;UsuarioAsesor&quot;: ${UsuarioAsesor},&#xd;
+    &quot;TokenSistema&quot;: ${tokenSistema},&#xd;
+    &quot;TokenSponsor&quot;: ${tokenSponsor},&#xd;
+    &quot;Accion&quot;: &quot;R&quot;,&#xd;
+    &quot;TipoIdentificacion&quot;: &quot;0001&quot;,&#xd;
+    &quot;Identificacion&quot;: &quot;&quot;,&#xd;
+    &quot;PrimerNombre&quot;: &quot;MARCIA&quot;,&#xd;
+    &quot;SegundoNombre&quot;: &quot;SOFIA&quot;,&#xd;
+    &quot;TercerNombre&quot;: &quot;&quot;,&#xd;
+    &quot;PrimerApellido&quot;: &quot;SHIGUANGO&quot;, &#xd;
+    &quot;SegundoApellido&quot;: &quot;TAPUY&quot;,&#xd;
+    &quot;FechaNacimiento&quot;: &quot;25/10/1983&quot;,&#xd;
+    &quot;Edad&quot;: &quot;40&quot;,&#xd;
+    &quot;CodigoGenero&quot;: &quot;1&quot;,&#xd;
+    &quot;CodigoEstadoCivil&quot;: &quot;2&quot;,&#xd;
+    &quot;IngresosMensuales&quot;: &quot;2080.00&quot;,&#xd;
+    &quot;Patrimonio&quot;: &quot;80200.00&quot;,&#xd;
+    &quot;Canton&quot;: &quot;0060&quot;,&#xd;
+    &quot;PaisOrigen&quot;: &quot;EC&quot;,&#xd;
+    &quot;Nacionalidad&quot;: &quot;EC&quot;,&#xd;
+    &quot;LugarNacimiento&quot;: &quot;PICHINCHA-QUITO&quot;,&#xd;
+    &quot;EmailPersonal&quot;: &quot;catalina.felix@logicstudioplus.net&quot;,&#xd;
+    &quot;TelefonoMovil&quot;: &quot;0979122175&quot;,&#xd;
+    &quot;Ocupacion&quot;: &quot;800011&quot;,&#xd;
+    &quot;CodigoPaisDomicilio&quot;: &quot;ECUADOR&quot;,&#xd;
+    &quot;CodigoProvinciaDomicilio&quot;: &quot;17&quot;,&#xd;
+    &quot;CodigoCiudadDomicilio&quot;: &quot;0060&quot;,&#xd;
+    &quot;DireccionDomicilio&quot;: &quot;De los Eucaliptos Oe4-306 y Diego de Vasquez&quot;,&#xd;
+    &quot;TelefonoDomicilio&quot;: &quot;023166666&quot;,&#xd;
+    &quot;CodigoActividadEconomica&quot;: &quot;16000&quot;,&#xd;
+    &quot;CodigoSubActividad&quot;: &quot;16505&quot;,&#xd;
+    &quot;PersonaContacto&quot;: &quot;Pedro Andrade &quot;,&#xd;
+    &quot;TelefonoContacto&quot;: &quot;0979516482&quot;,&#xd;
+    &quot;ParentescoContacto&quot;: &quot;Amigo&quot;,&#xd;
+    &quot;FechaReferimiento&quot;: &quot;2025-02-18T12:55:00&quot;,&#xd;
+    &quot;IdReferimientoCanalVenta&quot;: &quot;CF18012025_1402&quot;,&#xd;
+    &quot;Productos&quot;: [&#xd;
+        {&#xd;
+            &quot;CodigoProducto&quot;: &quot;96&quot;,&#xd;
+            &quot;CodigoProductoSIGS&quot;: null,&#xd;
+            &quot;CodigoCobertura&quot;: &quot;11P&quot;,&#xd;
+            &quot;CodigoModalidad&quot;: &quot;P&quot;,&#xd;
+            &quot;CodigoFrecuencia&quot;: &quot;AP&quot;,&#xd;
+            &quot;ValorTotalConIva&quot;: 29.99,&#xd;
+            &quot;ValorTotalSinIva&quot;: 28.84,&#xd;
+            &quot;TipoCuentaTarjeta&quot;: &quot;Q&quot;,&#xd;
+            &quot;DescripcionCuentaTarjeta&quot;: null,&#xd;
+            &quot;NoCuentaTarjeta&quot;: &quot;2100208832&quot;,&#xd;
+            &quot;Enfermedad&quot;: &quot;Gastritis&quot;,&#xd;
+            &quot;Validado&quot;: false,&#xd;
+            &quot;Mensaje&quot;: null,&#xd;
+            &quot;DireccionBienAsegurado&quot;: &quot;&quot;,&#xd;
+            &quot;TelefonoBienAsegurado&quot;: &quot;&quot;,&#xd;
+            &quot;CodigoPaisNegocio&quot;: &quot;&quot;,&#xd;
+            &quot;CodigoCiudadNegocio&quot;: &quot;&quot;,&#xd;
+            &quot;CodigoProvinciaNegocio&quot;: &quot;&quot;,&#xd;
+            &quot;DireccionNegocio&quot;: &quot;&quot;,&#xd;
+            &quot;Beneficiarios&quot;: [&#xd;
+                {&#xd;
+                    &quot;Identificacion&quot;: &quot;174534231&quot;,&#xd;
+                    &quot;PrimerNombre&quot;: &quot;ANDRES&quot;,&#xd;
+                    &quot;SegundoNombre&quot;: &quot;ANIBAL&quot;,&#xd;
+                    &quot;TercerNombre&quot;: &quot;&quot;,&#xd;
+                    &quot;PrimerApellido&quot;: &quot;SOLIS&quot;,&#xd;
+                    &quot;SegundoApellido&quot;: &quot;SOL&quot;,&#xd;
+                    &quot;FechaNacimiento&quot;: &quot;2004-01-01&quot;,&#xd;
+                    &quot;Edad&quot;: 0,&#xd;
+                    &quot;CodigoGenero&quot;: &quot;1&quot;,&#xd;
+                    &quot;Parentesco&quot;: &quot;3&quot;,&#xd;
+                    &quot;Porcentaje&quot;: 100,&#xd;
+                    &quot;Telefono&quot;: &quot;0999994565&quot;,&#xd;
+                    &quot;Mail&quot;: &quot;emai@dominio.com&quot;,&#xd;
+                    &quot;Validado&quot;: false,&#xd;
+                    &quot;Mensaje&quot;: null&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;RolAsesor&quot;: null&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Consultar Producto" enabled="false">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <stringProp name="HTTPSampler.domain">10.202.30.12</stringProp>
+          <stringProp name="HTTPSampler.port">8098</stringProp>
+          <stringProp name="HTTPSampler.protocol">HTTP</stringProp>
+          <stringProp name="HTTPSampler.path">api/ventas/movilidad/productos</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+       &quot;InPut&quot;:&#xd;
+     {&#xd;
+        &quot;IdentificacionCliente&quot;: &quot;2100828330&quot;,&#xd;
+        &quot;TipoIdentificacionCliente&quot;: &quot;0001&quot;,&#xd;
+        &quot;UsuarioAsesor&quot;: &quot;wfandrad&quot;,&#xd;
+        &quot;TokenSistema&quot;: ${tokenSistema},&#xd;
+        &quot;TokenSponsor&quot;: ${tokenSponsor}&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <stringProp name="filename">D:/jonathanDelgado/automatizacion_con_JMETER/DatosSIMA-tk59888-p2.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">IdentificacionCliente</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

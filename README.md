@@ -35,6 +35,7 @@ java -version
 3. **Descomprime el archivo:**
 
 - Descomprimir el archivo apache-jmeter-5.5.zit o apache-jmeter-5.5.rar en la carpeta raiz de tu disco local C.
+kljhgfvahjsdkghjikjhgjklj
 
 ### 📥 Clonar el Repositorio
 ```bash

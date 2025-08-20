@@ -2,7 +2,6 @@
 Este repositorio contiene las colecciones y entornos de Postman asi como también las automatizaciones/scripts de prueba creados con [Apache JMeter](https://jmeter.apache.org/) para el proyecto de **Consulta de productos y Referidos Prepagados**. A continuación encontrarás las instrucciones para instalar JMeter, importar las colecciones y entornos de Postman, clonar este repositorio, y ejecutar las pruebas localmente.
 
 ## Postman
-## Hola a todos.
 
 ### ⬇️ Importar la colección
 1. Abrir Postman.
